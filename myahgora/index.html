@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Ahgora</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        .container {
+            background: white;
+
+            width: 90%;
+            max-width: 450px;
+
+            padding: 40px 25px;
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .loading {
+            margin-top: 25px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>My Ahgora</h1>
+
+        <p id="mensagem">
+            Identificando seu dispositivo...
+        </p>
+
+        <p class="loading">
+            Aguarde um momento.
+        </p>
+
+    </div>
+
+
+    <script>
+
+        // ==========================================
+        // LINKS DAS LOJAS
+        // ==========================================
+
+        const GOOGLE_PLAY =
+            "https://play.google.com/store/apps/details?id=br.com.ahgora.myahgora";
+
+        const APP_STORE =
+            "https://apps.apple.com/br/app/my-ahgora/id1502293191";
+
+
+        // ==========================================
+        // IDENTIFICAÇÃO DO DISPOSITIVO
+        // ==========================================
+
+        const userAgent =
+            navigator.userAgent ||
+            navigator.vendor ||
+            window.opera;
+
+
+        // ==========================================
+        // ANDROID
+        // ==========================================
+
+        if (/android/i.test(userAgent)) {
+
+            window.location.replace(GOOGLE_PLAY);
+
+        }
+
+
+        // ==========================================
+        // IPHONE / IPAD
+        // ==========================================
+
+        else if (
+            /iPhone|iPad|iPod/i.test(userAgent)
+        ) {
+
+            window.location.replace(APP_STORE);
+
+        }
+
+
+        // ==========================================
+        // OUTROS DISPOSITIVOS
+        // ==========================================
+
+        else {
+
+            document.getElementById("mensagem").innerHTML =
+                "Acesse este endereço pelo seu celular para baixar o My Ahgora.";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
