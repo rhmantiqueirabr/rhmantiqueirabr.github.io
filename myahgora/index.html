@@ -5,11 +5,9 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Baixe o aplicativo My Ahgora">
+    <meta name="description" content="Baixe o aplicativo My Ahgora">
 
     <title>My Ahgora | Baixar aplicativo</title>
 
@@ -20,11 +18,8 @@
             box-sizing: border-box;
         }
 
-
         body {
-
             margin: 0;
-
             min-height: 100vh;
 
             font-family:
@@ -35,31 +30,21 @@
                 Arial,
                 sans-serif;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #f4f7fb,
-                    #ffffff
-                );
+            background: #f5f7fa;
 
             color: #222;
 
             display: flex;
-
             align-items: center;
-
             justify-content: center;
 
             padding: 20px;
-
         }
 
 
         .container {
-
             width: 100%;
-
-            max-width: 480px;
+            max-width: 460px;
 
             background: #ffffff;
 
@@ -70,100 +55,80 @@
             text-align: center;
 
             box-shadow:
-                0 10px 40px
-                rgba(0, 0, 0, 0.10);
-
+                0 8px 30px rgba(0, 0, 0, 0.10);
         }
 
 
         .logo {
-
-            width: 90px;
-
-            height: 90px;
+            width: 110px;
+            height: 110px;
 
             margin: 0 auto 25px;
 
             border-radius: 20px;
 
-            background: #eeeeee;
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
 
-            font-size: 20px;
-
-            font-weight: bold;
-
-            color: #555;
-
+            overflow: hidden;
         }
 
+
         .logo img {
+            width: 100%;
+            height: 100%;
 
-    width: 100%;
+            object-fit: contain;
+        }
 
-    height: 100%;
-
-    object-fit: contain;
-
-}
 
         h1 {
-
-            margin: 0 0 10px;
+            margin: 0 0 12px;
 
             font-size: 28px;
-
+            line-height: 1.2;
         }
 
 
         .subtitle {
-
-            margin: 0 0 30px;
+            margin: 0 0 25px;
 
             color: #666;
 
             font-size: 16px;
 
             line-height: 1.5;
-
         }
 
 
         .status {
-
-            padding: 15px;
-
             margin-bottom: 25px;
 
-            background: #f5f5f5;
+            padding: 14px;
 
             border-radius: 10px;
+
+            background: #f3f4f6;
 
             color: #555;
 
             font-size: 14px;
 
+            line-height: 1.4;
         }
 
 
         .buttons {
-
             display: flex;
 
             flex-direction: column;
 
             gap: 12px;
-
         }
 
 
         .button {
-
             display: block;
 
             width: 100%;
@@ -178,44 +143,32 @@
 
             font-weight: 600;
 
-            transition:
-                transform 0.15s ease,
-                opacity 0.15s ease;
-
+            transition: opacity 0.2s ease;
         }
 
 
         .button:hover {
-
-            transform: translateY(-1px);
-
-            opacity: 0.9;
-
+            opacity: 0.85;
         }
 
 
         .android {
+            background: #222222;
 
-            background: #222;
-
-            color: white;
-
+            color: #ffffff;
         }
 
 
         .ios {
-
             background: #eeeeee;
 
-            color: #222;
+            color: #222222;
 
-            border: 1px solid #ddd;
-
+            border: 1px solid #dddddd;
         }
 
 
         .desktop-message {
-
             display: none;
 
             margin-top: 20px;
@@ -225,33 +178,31 @@
             font-size: 14px;
 
             line-height: 1.5;
-
         }
 
 
         .footer {
-
             margin-top: 30px;
 
             font-size: 12px;
 
             color: #999;
-
         }
 
 
         @media (max-width: 480px) {
 
             .container {
-
                 padding: 30px 20px;
-
             }
 
             h1 {
-
                 font-size: 24px;
+            }
 
+            .logo {
+                width: 90px;
+                height: 90px;
             }
 
         }
@@ -267,21 +218,25 @@
     <main class="container">
 
 
-      <div class="logo">
+        <!-- LOGO DO APLICATIVO -->
 
-    <img
-        src="logo%20my%20ahgora.jpg"
-        alt="Logo My Ahgora">
+        <div class="logo">
 
-</div>
+            <img
+                src="logo%20my%20ahgora.jpg"
+                alt="Logo My Ahgora">
 
+        </div>
+
+
+        <!-- NOME DO APLICATIVO -->
 
         <h1>
-
             Baixe o My Ahgora
-
         </h1>
 
+
+        <!-- DESCRIÇÃO -->
 
         <p class="subtitle">
 
@@ -291,6 +246,8 @@
         </p>
 
 
+        <!-- STATUS -->
+
         <div
             id="status"
             class="status">
@@ -299,6 +256,8 @@
 
         </div>
 
+
+        <!-- BOTÕES -->
 
         <div class="buttons">
 
@@ -326,13 +285,18 @@
         </div>
 
 
+        <!-- MENSAGEM PARA COMPUTADOR -->
+
         <p
             id="desktopMessage"
             class="desktop-message">
 
             Você está acessando esta página por um computador.
-            Para instalar o My Ahgora, abra este endereço
-            pelo celular ou utilize uma das opções acima.
+
+            <br><br>
+
+            Para instalar o My Ahgora,
+            utilize um celular ou escolha uma das opções acima.
 
         </p>
 
@@ -351,7 +315,7 @@
 
 
         // =====================================================
-        // CONFIGURAÇÃO
+        // CONFIGURAÇÃO DO MY AHGORA
         // =====================================================
 
 
@@ -385,7 +349,7 @@
 
 
         // =====================================================
-        // GARANTE QUE OS BOTÕES USEM OS LINKS ATUAIS
+        // GARANTE QUE OS BOTÕES USEM OS LINKS CONFIGURADOS
         // =====================================================
 
 
@@ -403,17 +367,31 @@
 
 
         const userAgent =
-            navigator.userAgent ||
-            navigator.vendor ||
-            window.opera;
+            navigator.userAgent || "";
 
+
+        const platform =
+            navigator.platform || "";
+
+
+        // Android
 
         const isAndroid =
             /Android/i.test(userAgent);
 
 
+        // iPhone / iPad / iPod
+
         const isIOS =
             /iPhone|iPad|iPod/i.test(userAgent);
+
+
+        // Alguns iPads mais recentes se identificam
+        // como computador Mac.
+
+        const isIPad =
+            platform === "MacIntel" &&
+            navigator.maxTouchPoints > 1;
 
 
         // =====================================================
@@ -423,9 +401,8 @@
 
         if (isAndroid) {
 
-
             status.innerHTML =
-                "Dispositivo Android identificado. Redirecionando para a Google Play...";
+                "Android identificado. Abrindo a Google Play...";
 
 
             setTimeout(function() {
@@ -433,8 +410,7 @@
                 window.location.href =
                     GOOGLE_PLAY;
 
-            }, 800);
-
+            }, 700);
 
         }
 
@@ -444,11 +420,10 @@
         // =====================================================
 
 
-        else if (isIOS) {
-
+        else if (isIOS || isIPad) {
 
             status.innerHTML =
-                "Dispositivo Apple identificado. Redirecionando para a App Store...";
+                "iPhone ou iPad identificado. Abrindo a App Store...";
 
 
             setTimeout(function() {
@@ -456,8 +431,7 @@
                 window.location.href =
                     APP_STORE;
 
-            }, 800);
-
+            }, 700);
 
         }
 
@@ -469,9 +443,8 @@
 
         else {
 
-
             status.innerHTML =
-                "Acesse pelo celular para instalar o aplicativo.";
+                "Acesse esta página pelo seu celular para instalar o aplicativo.";
 
 
             desktopMessage.style.display =
