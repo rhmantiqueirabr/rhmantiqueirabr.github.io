@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Baixe o aplicativo Meu SOC">
+
+    <title>Meu SOC | Baixar aplicativo</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            background: #f5f7fa;
+
+            color: #222;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 20px;
+        }
+
+
+        .container {
+            width: 100%;
+            max-width: 460px;
+
+            background: #ffffff;
+
+            border-radius: 20px;
+
+            padding: 40px 30px;
+
+            text-align: center;
+
+            box-shadow:
+                0 8px 30px rgba(0, 0, 0, 0.10);
+        }
+
+
+        .logo {
+            width: 110px;
+            height: 110px;
+
+            margin: 0 auto 25px;
+
+            border-radius: 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+        }
+
+
+        h1 {
+            margin: 0 0 12px;
+
+            font-size: 28px;
+            line-height: 1.2;
+        }
+
+
+        .subtitle {
+            margin: 0 0 25px;
+
+            color: #666;
+
+            font-size: 16px;
+
+            line-height: 1.5;
+        }
+
+
+        .status {
+            margin-bottom: 25px;
+
+            padding: 14px;
+
+            border-radius: 10px;
+
+            background: #f3f4f6;
+
+            color: #555;
+
+            font-size: 14px;
+
+            line-height: 1.4;
+        }
+
+
+        .buttons {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 12px;
+        }
+
+
+        .button {
+            display: block;
+
+            width: 100%;
+
+            padding: 15px 20px;
+
+            border-radius: 10px;
+
+            text-decoration: none;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            transition: opacity 0.2s ease;
+        }
+
+
+        .button:hover {
+            opacity: 0.85;
+        }
+
+
+        .android {
+            background: #222222;
+
+            color: #ffffff;
+        }
+
+
+        .ios {
+            background: #eeeeee;
+
+            color: #222222;
+
+            border: 1px solid #dddddd;
+        }
+
+
+        .desktop-message {
+            display: none;
+
+            margin-top: 20px;
+
+            color: #666;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+        }
+
+
+        .footer {
+            margin-top: 30px;
+
+            font-size: 12px;
+
+            color: #999;
+        }
+
+
+        @media (max-width: 480px) {
+
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .logo {
+                width: 90px;
+                height: 90px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <main class="container">
+
+
+        <!-- LOGO DO APLICATIVO -->
+
+        <div class="logo">
+
+            <img
+                src="logo%20meu%20soc.png"
+                alt="Logo Meu SOC">
+
+        </div>
+
+
+        <!-- NOME DO APLICATIVO -->
+
+        <h1>
+            Baixe o Meu SOC
+        </h1>
+
+
+        <!-- DESCRIÇÃO -->
+
+        <p class="subtitle">
+
+            Estamos identificando seu dispositivo
+            e direcionando você para a loja correta.
+
+        </p>
+
+
+        <!-- STATUS -->
+
+        <div
+            id="status"
+            class="status">
+
+            Identificando seu dispositivo...
+
+        </div>
+
+
+        <!-- BOTÕES -->
+
+        <div class="buttons">
+
+
+            <a
+                id="androidButton"
+                class="button android"
+                href="https://play.google.com/store/apps/details?id=com.age.portalfuncionarioapp&hl=pt_BR">
+
+                Baixar para Android
+
+            </a>
+
+
+            <a
+                id="iosButton"
+                class="button ios"
+                href="https://apps.apple.com/br/app/meusoc/id1491976414">
+
+                Baixar para iPhone
+
+            </a>
+
+
+        </div>
+
+
+        <!-- MENSAGEM PARA COMPUTADOR -->
+
+        <p
+            id="desktopMessage"
+            class="desktop-message">
+
+            Você está acessando esta página por um computador.
+
+            <br><br>
+
+            Para instalar o Meu SOC,
+            utilize um celular ou escolha uma das opções acima.
+
+        </p>
+
+
+        <div class="footer">
+
+            Meu SOC
+
+        </div>
+
+
+    </main>
+
+
+    <script>
+
+
+        // =====================================================
+        // CONFIGURAÇÃO DO MEU SOC
+        // =====================================================
+
+
+        const GOOGLE_PLAY =
+            "https://play.google.com/store/apps/details?id=com.age.portalfuncionarioapp&hl=pt_BR";
+
+
+        const APP_STORE =
+            "https://apps.apple.com/br/app/meusoc/id1491976414";
+
+
+        // =====================================================
+        // ELEMENTOS DA PÁGINA
+        // =====================================================
+
+
+        const status =
+            document.getElementById("status");
+
+
+        const desktopMessage =
+            document.getElementById("desktopMessage");
+
+
+        const androidButton =
+            document.getElementById("androidButton");
+
+
+        const iosButton =
+            document.getElementById("iosButton");
+
+
+        // =====================================================
+        // GARANTE QUE OS BOTÕES USEM OS LINKS CONFIGURADOS
+        // =====================================================
+
+
+        androidButton.href =
+            GOOGLE_PLAY;
+
+
+        iosButton.href =
+            APP_STORE;
+
+
+        // =====================================================
+        // IDENTIFICA O DISPOSITIVO
+        // =====================================================
+
+
+        const userAgent =
+            navigator.userAgent || "";
+
+
+        const platform =
+            navigator.platform || "";
+
+
+        // Android
+
+        const isAndroid =
+            /Android/i.test(userAgent);
+
+
+        // iPhone / iPad / iPod
+
+        const isIOS =
+            /iPhone|iPad|iPod/i.test(userAgent);
+
+
+        // Alguns iPads mais recentes
+        // podem se identificar como Mac.
+
+        const isIPad =
+            platform === "MacIntel" &&
+            navigator.maxTouchPoints > 1;
+
+
+        // =====================================================
+        // ANDROID
+        // =====================================================
+
+
+        if (isAndroid) {
+
+            status.innerHTML =
+                "Android identificado. Abrindo a Google Play...";
+
+
+            setTimeout(function() {
+
+                window.location.href =
+                    GOOGLE_PLAY;
+
+            }, 700);
+
+        }
+
+
+        // =====================================================
+        // IPHONE / IPAD
+        // =====================================================
+
+
+        else if (isIOS || isIPad) {
+
+            status.innerHTML =
+                "iPhone ou iPad identificado. Abrindo a App Store...";
+
+
+            setTimeout(function() {
+
+                window.location.href =
+                    APP_STORE;
+
+            }, 700);
+
+        }
+
+
+        // =====================================================
+        // COMPUTADOR / OUTRO DISPOSITIVO
+        // =====================================================
+
+
+        else {
+
+            status.innerHTML =
+                "Acesse esta página pelo seu celular para instalar o aplicativo.";
+
+
+            desktopMessage.style.display =
+                "block";
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
